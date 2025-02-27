@@ -16,8 +16,8 @@ from sklearn.preprocessing import StandardScaler
 st.title('Задания 7, 8, 9')
 
 # объединение таблиц
-red_wine = pd.read_csv(r"C:\Users\user\Desktop\ds_course\HW5\source\winequality-red.csv", sep=";")
-white_wine = pd.read_csv(r"C:\Users\user\Desktop\ds_course\HW5\source\winequality-white.csv", sep=";")
+red_wine = pd.read_csv("source/winequality-red.csv", sep=";")
+white_wine = pd.read_csv(r"source/winequality-white.csv", sep=";")
 wine_data = pd.concat([red_wine, white_wine])
 wine = wine_data.sample(6497).reset_index().drop(['index'], axis=1)
 
