@@ -20,7 +20,7 @@ st.write(''' ### 🔹 Загрузка данных:
 ''')
 
 # объединение таблиц
-red_wine = pd.read_csv(r"source\winequality-red.csv", sep=";")
+red_wine = pd.read_csv("source/winequality-red.csv", sep=";")
 white_wine = pd.read_csv(r"source\winequality-white.csv", sep=";")
 wine_data = pd.concat([red_wine, white_wine])
 wine = wine_data.sample(6497).reset_index().drop(['index'], axis=1)
